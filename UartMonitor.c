@@ -27,6 +27,7 @@ int main(void)
                 }
                 SerialOneData = serialGetchar(SerialPortOne);
                 printf("%c",SerialOneData);
+                fflush(stdout);
                 if(SerialOneData == '\n') PrintLabelOne = 1;
             }
             if(serialDataAvail(SerialPortTwo) != 0)
@@ -38,6 +39,7 @@ int main(void)
                 }
                 SerialTwoData = serialGetchar(SerialPortTwo);
                 printf("%c", SerialTwoData);
+                fflush(stdout);
                 if(SerialTwoData == '\n') PrintLabelTwo = 1;
             }
         }
